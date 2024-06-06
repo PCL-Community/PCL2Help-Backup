@@ -1,0 +1,79 @@
+<!-- 2023/02/20 修改掉的图片 https://wwou.lanzoub.com/iA9gY0o28i9c -->
+<!-- 2023/02/20 添加的图片 https://wwou.lanzoub.com/iS4Xr0o4vr4b 目前没有加箭头，可以加一下 -->
+
+<local:MyCard Title="简介及注意事项">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,10,0,0" Text="如果您想用于联机，那么联机加入者必须是正版或第三方登录，对房主则无要求。" />
+        <TextBlock Margin="0,10,0,0" Text="如果您想在多人游戏中展示您的皮肤，请保证所有参与联机的成员均使用 LittleSkin 登录。皮肤显示不正常时，也可以搭配 CustomSkinLoader 模组并添加 ExtraList 文件以达到相同的效果。" />
+        <local:MyHint Margin="0,10,0,0" Text="LittleSkin 登录不能用于进入正版服务器。" IsWarn="False" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,10,10,0" MinWidth="140" Padding="13,0" HorizontalAlignment="Left" Height="35" 
+                            Text="打开 LittleSkin" EventType="打开网页" EventData="https://littleskin.cn" />
+            <local:MyButton Margin="0,10,10,0" MinWidth="280" Padding="13,0" HorizontalAlignment="Left" Height="35" 
+                            Text="获取配置文件（须登录 LittleSkin）" EventType="打开网页" EventData="https://littleskin.cn/user/config" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="设置方法" Margin="0,0,0,15">
+	<StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,0,0,0" Text="以下填写的所有邮箱地址应全部为英文小写字母，否则将会出现 UUID 为 null 的情况导致无法进入服务器！"/>
+        <local:MyHint Margin="0,10,0,0" Text="在注册 LittleSkin 账号时不要使用第三方登录，可能会导致账号无法设置密码，从而无法继续操作！" IsWarn="False" />
+        <Grid Margin="0,10,0,0">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="1. 前往 LittleSkin 注册一个账号。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/05/15/64623b15ae134.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="2. 进入 “仪表盘”，点击左侧 “角色管理”，再点击 “添加新角色”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/10/1/img2.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="3. 在弹出的窗口内输入角色名（这将会成为联机时的 ID，即游戏中的用户名），填写完成后点击 “确定”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/10/1/img3.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="4. 打开 PCL，点击左下角的 “版本选择”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c871bde4a0d.png?comment=版本选择" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="5. 右键点击将要启动的游戏版本。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c871fe7266a.png?comment=右键游戏版本" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="6. 点击左侧 “设置” 选项。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c8725a4a256.png?comment=点击设置选项" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="7. 滑动到页面底部，在“服务器选项”中把登录方式设为 “第三方登录：Authlib Injector 或 LittleSkin”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c872781d6db.png?comment=设置登录方式" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="8. 点击下方 “设置为 LittleSkin” 按钮。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c8729a9c5f6.png?comment=设置为littleskin" />
+        </Grid>
+
+        <local:MyHint Margin="0,20,0,0" Text="在启动游戏后，PCL 能够记忆你的账号，并且可以进行更换角色、更改皮肤、退出登录等操作。" IsWarn="False" />
+        <Grid Margin="0,10,0,0">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="9. 返回主页并输入你的 LittleSkin 账号，点击 “启动游戏” 即可。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/08/01/64c872bbdf372.png?comment=启动游戏" />
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyHint Margin="0,0,0,15" Text="作者：一闪、呇星、EggPixel、风释清然SC、龙腾猫跃" IsWarn="False" />

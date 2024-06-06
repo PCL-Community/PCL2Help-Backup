@@ -1,0 +1,96 @@
+<local:MyCard Title="获取资源包" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+                   Text="你可以在许多相关资源网站找到资源包，诸如 CurseForge、Modrinth。你可以点击下面的按钮来快速跳转至这些网站：" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <local:MyButton Margin="0,4,20,0" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                        Text="CurseForge 资源包下载" EventType="打开网页" EventData="https://www.curseforge.com/minecraft/search?class=texture-packs" />
+            <local:MyButton Margin="0,4,20,0" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                        Text="Modrinth 资源包下载" EventType="打开网页" EventData="https://modrinth.com/resourcepacks" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="导入纹理包（材质包）" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <Grid>
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="1. 选择您想要安装资源包的版本后，点击 “版本设置”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/12/11/657691bd6338a.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="2. 于 “快捷方式” 一栏中点击 “存档文件夹” 按钮。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2023/09/30/6517e1fa751b2.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="3. 此时，您应该能在弹出的资源管理器界面中看见 “resourcepacks” 文件夹。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/explorer-resource-pack-folder-find.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="4. 打开 “resourcepacks” 文件夹，并将您的资源包拖入 “resourcepacks” 文件夹。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/explorer-prepared-put-into-resourcepack-folder.png" />
+        </Grid>
+        <local:MyHint Margin="0,15,0,0" Text="部分资源包压缩包主体内套入了一个文件夹，此时你可以直接将此文件夹解压至 “resourcepacks” 文件夹使用。" IsWarn="False" />
+        <Image HorizontalAlignment="Center" Margin="50,15,50,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/bandizip-zip-folder.png"/>
+        <Image HorizontalAlignment="Center" Margin="50,15,50,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/explorer-resourcepack-folder-resourcepack.png"/>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="启用纹理包（材质包）" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <Grid>
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="1. 启动游戏，打开 “选项” → “资源包”。" HorizontalAlignment="Left" />
+                <StackPanel Margin="250,0,0,0">
+                    <Image HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-settings.png" />
+                    <Image HorizontalAlignment="Center" Margin="0,15,0,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-settings-resourcepack.png" />
+                </StackPanel>
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="2. 此时，左侧 “可用” 列表中罗列有尚未启用的资源包。将鼠标指针移动至资源包图标上方，点击出现的箭头，使该资源包将移动至右侧 “已选” 列表后，点击 “完成” 后即可应用资源包。" HorizontalAlignment="Left" />
+            <StackPanel Margin="250,0,0,0">
+                <Image HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-resourcepack-choose.png" />
+                <Image HorizontalAlignment="Center" Margin="0,15,0,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-resourcepack-left.png" />
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="对于 1.16 以上版本的安装方法" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Text="这是 1.16 以上版本的更快捷的安装方式，你依旧可以使用上面的方式来安装材质。" IsWarn="False" />
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="1. 启动游戏，打开 “选项” → “资源包”。" HorizontalAlignment="Left" />
+                <StackPanel Margin="250,0,0,0">
+                  <Image HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-settings.png" />
+                  <Image HorizontalAlignment="Center" Margin="0,15,0,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-settings-resourcepack.png" />
+                </StackPanel>
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="2. 将您的资源包文件直接拖至 Minecraft 窗口内。此时会弹出一个提示询问安装，点击 “是”。" HorizontalAlignment="Left" />
+            <Image Margin="250,0,0,0" HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/11/19/6/old-version-resourcepack-true.png" />
+        </Grid>
+
+        <Grid Margin="0,20,0,4">
+            <TextBlock TextWrapping="Wrap" Margin="0,15,0,4" Width="200"
+                        Text="3. 此时，左侧 “可用” 列表中罗列有尚未启用的资源包。将鼠标指针移动至资源包图标上方，点击出现的箭头，使该资源包将移动至右侧 “已选” 列表后，点击 “完成” 后即可应用资源包。" HorizontalAlignment="Left" />
+            <StackPanel Margin="250,0,0,0">
+                <Image HorizontalAlignment="Center" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-resourcepack-choose.png" />
+                <Image HorizontalAlignment="Center" Margin="0,15,0,0" Source="https://img.z0z0r4.top/local/2022/07/26/6/minecraft-resourcepack-left.png" />
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+<local:MyHint Margin="0,0,0,15" Text="作者：WTP016、林小槐、风释清然SC" IsWarn="False" />

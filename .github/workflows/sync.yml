@@ -33,6 +33,7 @@ jobs:
 
       - name: clone repo
         run: |
+          rm -rf PCL2Help
           git clone https://github.com/LTCatt/PCL2Help.git
     
       - name: Run script

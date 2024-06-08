@@ -41,13 +41,28 @@ jobs:
           python sync.py
           
       - name: Commit changes
+        id: check_commit
         run: |
-          git config --local user.email "github-bot@example.com"
-          git config --local user.name "Github-Bot"
-          git add .
-          git commit -m "Sync"
-      
+          # 检查是否有文件被修改但尚未提交
+          if [[ $(git status --porcelain) ]]; then
+              echo "有文件被修改但尚未提交。"
+              # 输出修改的文件列表
+              git status --short
+              # 添加所有已修改的文件到暂存区
+              git add .
+              # 提交暂存区中的文件到仓库
+              git config --local user.email "github-bot@example.com"
+              git config --local user.name "Github-Bot"
+              git commit -m "Sync"
+              echo "文件已提交到仓库。"
+              echo "::set-output name=commit_required::true"
+          else
+              echo "没有文件被修改。"
+              echo "::set-output name=commit_required::false"
+          fi
+          
       - name: Push changes
+        if: ${{ needs.check_commit.outputs.commit_required == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

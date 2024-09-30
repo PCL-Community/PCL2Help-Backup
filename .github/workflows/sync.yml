@@ -62,7 +62,7 @@ jobs:
           fi
           
       - name: Push changes
-        if: ${{ needs.check_commit.outputs.commit_required == 'true' }}
+        # if: ${{ needs.check_commit.outputs.commit_required == 'true' }}
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

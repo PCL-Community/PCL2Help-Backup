@@ -29,6 +29,8 @@
                     Text="    ✔  233.233.233.233:12345" />
         <TextBlock Foreground="#DD4411" Margin="0,0,0,5"
                     Text="    ❌  http://mc.hypixel.net" />
+		<TextBlock Foreground="#DD4411" Margin="0,0,0,5"
+                    Text="    ❌  mc.example.com：25565" />
 
     </StackPanel>
 </local:MyCard>
@@ -128,7 +130,7 @@
         <TextBlock Margin="0,0,0,4" LineHeight="17"
                     Text="原因：无法访问目标地址。" />
         <TextBlock Margin="0,0,0,4" LineHeight="17"
-                    Text="解决方法：确认服务器地址拼写正确（尽量复制粘贴），或者确认服务器已开启。" />
+                    Text="解决方法：确认服务器地址拼写正确，若有冒号请确定为半角（英文）冒号，服务器地址尽量复制粘贴，或者确认服务器已开启。" />
     </StackPanel>
 </local:MyCard>
 
@@ -191,7 +193,7 @@
         <TextBlock Margin="0,0,0,4" LineHeight="17"
                     Text="原因：被服务器封禁。" />
         <TextBlock Margin="0,0,0,4" LineHeight="17"
-                    Text="解决方法：若你认为这是误封，联系服主。" />
+                    Text="解决方法：若你认为这是误封，请联系服主。" />
     </StackPanel>
 </local:MyCard>
 
